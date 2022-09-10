@@ -1,27 +1,25 @@
 # When done, submit this entire file to the autograder.
 # I made use of my previous hw from 3300 to resolve this part.
+# Joshue Torres Azanza CS 5300
 
 # Part 1
-
 def sum arr
-  # YOUR CODE HERE
   i = 0
-  arr.each {|j| i+= j}
+  arr.each {|j| i+= j} #sums the array
   i
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
   return 0 if arr.empty?
   return arr[0] if arr.length == 1
-  i = arr.sort
-  i[-1] + i[-2]
-end
+  i = arr.sort #sort array
+  i[-1] + i[-2] #makes the sum max
+end 
 
 def sum_to_n? arr, n
   return false if arr.empty? or arr.length == 1
-  i = Hash.new
-  arr.each{|x| 
+  i = Hash.new #creates a new hash 
+  arr.each{|x|  #checks for the hash key
     if i.key? x
       return true
     else
@@ -31,9 +29,7 @@ def sum_to_n? arr, n
 end
 
 # Part 2
-
 def hello(name)
-  # YOUR CODE HERE
   "Hello, #{name}"
 end
 
@@ -47,9 +43,7 @@ def binary_multiple_of_4? s
 end
 
 # Part 3
-
 class BookInStock
-# YOUR CODE HERE
   attr_accessor :isbn
   attr_accessor :price
 
@@ -58,6 +52,7 @@ class BookInStock
     @isbn = isbn
     @price = price
   end
+
   def price_as_string
     sprintf("$%2.2f", @price)
   end
